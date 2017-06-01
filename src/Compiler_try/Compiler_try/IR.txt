@@ -1,0 +1,7 @@
+         ESEQ(
+          EXP(
+           CONST 0),
+          CALL(
+           NAME L11,
+            TEMP t$fp,
+            CONST 10))

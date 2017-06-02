@@ -1,18 +1,10 @@
 %{
 #include <string.h>
 #include "util.h"
-#include "absyn.h"
-#include "y.tab.h"
+#include "tokens.h"
 #include "errormsg.h"
 
 int charPos=1;
-int commentDepth=0;
-
-/* String handling variables/functions */
-#define BUFSIZE 8192
-char strbuf[BUFSIZE+1];
-char *strptr = NULL;
-unsigned int strlength = 0;
 
 void setup(void)
 {
@@ -35,6 +27,7 @@ void appendstr(char *str)
 	}
 }
 
+
 int yywrap(void)
 {
  charPos=1;
@@ -49,19 +42,14 @@ void adjust(void)
 }
 
 %}
-%x COMMENT STR
+
 %%
-[ \t]	{adjust(); continue;}
-(\n|\r\n)  {adjust(); EM_newline(); continue;}
-"*"   {adjust(); return TIMES;}
-"/"   {adjust(); return DIVIDE;}
-"/*"  {adjust(); BEGIN(COMMENT); commentDepth++;}
-<COMMENT>{
-	"/*" {adjust(); commentDepth++;}
-	"*/" {adjust(); if (--commentDepth == 0) BEGIN(INITIAL);}
-	[^\n] {adjust();}
-	(\n|\r\n)	{adjust(); EM_newline();}
-}
+" "	 {adjust(); continue;}
+\t	 {adjust(); continue;}
+"/*"(.|\n)*"*/"	 {adjust(); continue;}
+"/*"	{adjust(); EM_error(EM_tokPos,"unterminated comment");}
+\n	 {adjust(); EM_newline(); continue;}
+","	 {adjust(); return COMMA;}
 "while" {adjust(); return WHILE;}
 "for"   {adjust(); return FOR;}
 "to"	{adjust(); return TO;}
@@ -79,8 +67,7 @@ void adjust(void)
 "do"	  {adjust(); return DO;}
 "of"	  {adjust(); return OF;}
 "nil"	  {adjust(); return NIL;}
-[a-zA-Z][a-zA-Z0-9_]*    {adjust(); yylval.sval=yytext; return ID;}
-","	  {adjust(); return COMMA;}
+[a-zA-Z][a-zA-Z0-9_]*    {adjust(); yylval.sval=yytext; return ID;} 
 ":"	  {adjust(); return COLON;}
 ";"	  {adjust(); return SEMICOLON;}
 "("	  {adjust(); return LPAREN;}
@@ -102,7 +89,6 @@ void adjust(void)
 "&"	  {adjust(); return AND;}
 "|"	  {adjust(); return OR;}
 [0-9]+	 {adjust(); yylval.ival=atoi(yytext); return INT;}
-
 \" {adjust(); BEGIN(STR); setup();}
 <STR>{
 	\" 			{adjust(); yylval.sval=teardown(); BEGIN(INITIAL); return STRING;}
@@ -113,10 +99,10 @@ void adjust(void)
 	\\\\		{adjust(); appendstr(yytext);}
 	\\\"		{adjust(); appendstr(yytext);}
 	\\[ \n\t\r\f]+\\ {adjust();}
-	\\(.|\n)	{adjust(); EM_error(EM_tokPos, "illegal token");}
-	\n			{adjust(); EM_error(EM_tokPos, "illegal token");}
+	\\(.|\n)	{adjust(); EM_error(EM_tokPos, "illegal ESC");}
+	\n			{adjust(); EM_error(EM_tokPos, "illegal String In");}
 	[^\"\\\n]+ 	{adjust(); appendstr(yytext);}
 }
 .	 {adjust(); EM_error(EM_tokPos,"illegal token");}
-%%
+
 

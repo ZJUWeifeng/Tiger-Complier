@@ -154,5 +154,9 @@ void adjust(void)
 	[^\"\\\n]+ 	{adjust(); appendstr(yytext);}
 }
 .	 {adjust(); EM_error(EM_tokPos,"illegal token");}
+<<EOF>>	{
+	if(commentDepth!=0){adjust();EM_error(EM_tokPos, "Unterminated comment!");}
+	else if(strlength!=0){adjust();EM_error(EM_tokPos, "Unterminated string!");}
+}
 %%
 

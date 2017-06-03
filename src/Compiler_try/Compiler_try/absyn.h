@@ -27,6 +27,10 @@ typedef struct A_namety_ *A_namety;
 typedef struct A_nametyList_ *A_nametyList;
 typedef struct A_efield_ *A_efield;
 typedef struct A_efieldList_ *A_efieldList;
+typedef struct A_caselist_ *A_caselist;
+{
+	/* data */
+};
 
 typedef enum { A_plusOp, A_minusOp, A_timesOp, A_divideOp,
 	A_eqOp, A_neqOp, A_ltOp, A_leOp, A_gtOp, A_geOp
@@ -173,6 +177,12 @@ struct A_efieldList_ {
 	A_efield head;
 	A_efieldList tail;
 };
+struct A_caselist_{
+	A_pos pos;
+	A_exp target;
+	A_exp body;
+	A_caselist next;
+};
 
 
 /* Function Prototypes */
@@ -210,6 +220,7 @@ A_namety A_Namety(S_symbol name, A_ty ty);
 A_nametyList A_NametyList(A_namety head, A_nametyList tail);
 A_efield A_Efield(S_symbol name, A_exp exp);
 A_efieldList A_EfieldList(A_efield head, A_efieldList tail);
+A_caselist A_CaseList(A_pos pos, A_exp target, A_exp body, A_caselist next);
 
 extern A_exp absyn_root;
 

@@ -32,6 +32,7 @@ void yyerror(char *s)
 	A_nametyList nametyList;
 	A_efield efield;
 	A_efieldList efieldList;
+	A_caselist caselist;
 }
 
 %type <exp> primyexp exp letexp condexp
@@ -46,6 +47,7 @@ void yyerror(char *s)
 %type <namety> tydec
 %type <efieldList> reclist nonreclist
 %type <sym> id
+%type <caselist> caselist
 
 %token <sval> ID STRING
 %token <ival> INT
@@ -58,6 +60,7 @@ void yyerror(char *s)
   ARRAY IF THEN ELSE WHILE FOR TO DO LET IN END OF 
   BREAK NIL
   FUNCTION VAR TYPE 
+  SWITCH CASE
 
 %nonassoc LOW
 %nonassoc THEN DO TYPE FUNCTION ID 
@@ -141,6 +144,11 @@ condexp:	  IF exp THEN exp ELSE exp			{$$=A_IfExp(EM_tokPos, $2, $4, $6);}
 			| IF exp THEN exp					{$$=A_IfExp(EM_tokPos, $2, $4, NULL);}
 			| WHILE exp DO exp					{$$=A_WhileExp(EM_tokPos, $2, $4);}
 			| FOR id ASSIGN exp TO exp DO exp	{$$=A_ForExp(EM_tokPos, $2, $4, $6, $8);}
+			| SWITCH exp caselist				{$$=A_SwitchExp(EM_tokPos, $2, $3);}
+			;
+
+caselist:	/* empty */							{$$=NULL;}
+			| CASE exp exp caselist 			{$$=A_CaseList(EM_tokPos, $2, $3, $4);}
 			;
 			
 decs:		/* empty */							{$$=NULL;}

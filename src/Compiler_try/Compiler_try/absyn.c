@@ -135,6 +135,44 @@ A_exp A_IfExp(A_pos pos, A_exp test, A_exp then, A_exp elsee)
 	return p;
 }
 
+A_exp A_SwitchExp(A_pos pos, A_exp item, A_caselist caseList){
+	A_exp p = checked_malloc(sizeof(*p));
+	p->pos = pos;
+
+	A_caselist* casePointer = &caseList;
+	A_exp ifPointer = p;
+	A_exp test = null;
+
+	ifPointer->kind = A_ifExp;
+	ifPointer->pos = casePointer->pos;
+	test = A_OpExp(ifPointer->pos, A_eqOp, item, casePointer->target);
+	ifPointer->u.iff.test = test;
+	ifPointer->u.iff.then = casePointer->body;
+	
+	while(casePointer->next){
+		ifPointer = ifPointer->u.iff.elsee = checked_malloc(sizeof(*(ifPointer->u.iff.elsee)));
+		casePointer = casePointer->next;
+		ifPointer->kind = A_ifExp;
+		ifPointer->pos = casePointer->pos;
+		test = A_OpExp(ifPointer->pos, A_eqOp, item, casePointer->target);
+		ifPointer->u.iff.test = test;
+		ifPointer->u.iff.then = casePointer->body;
+	}
+
+	ifPointer->u.iff.then = NULL;
+	
+	return p;
+}
+
+A_caselist A_CaseList(A_pos pos, A_exp target, A_exp body, A_caselist next){
+	A_caselist p = checked_malloc(sizeof(*p));
+	p->pos = pos;
+	p->target = target;
+	p->body = body;
+	p->next = next;
+	return p;
+}
+
 A_exp A_WhileExp(A_pos pos, A_exp test, A_exp body)
 {
 	A_exp p = checked_malloc(sizeof(*p));

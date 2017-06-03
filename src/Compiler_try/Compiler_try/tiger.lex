@@ -27,7 +27,7 @@ Reserved reserved[RESERVEDSIZE] = {
     { "while", WHILE}, {"for", FOR}, {"to", TO}, {"break", BREAK}, {"let", LET},
 	{"in", IN}, {"end", END}, {"function", FUNCTION}, {"var", VAR}, {"type", TYPE},
 	{"array", ARRAY}, {"if", IF}, {"then", THEN}, {"else", ELSE},{"do", DO},
-	{"of", OF}, {"nil", NIL}
+	{"of", OF}, {"nil", NIL}, {"switch", SWITCH}, {"case", CASE}
 };
 Nearest_List L_nearest = NULL;
 
@@ -93,6 +93,8 @@ void adjust(void)
 "if"	  {adjust(); return IF;}
 "then"  {adjust(); return THEN;}
 "else"  {adjust(); return ELSE;}
+"switch"	  {adjust(); return SWITCH;}
+"case"  {adjust(); return CASE;}
 "do"	  {adjust(); return DO;}
 "of"	  {adjust(); return OF;}
 "nil"	  {adjust(); return NIL;}

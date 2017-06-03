@@ -7,6 +7,6 @@
 
 struct expty {Tr_exp exp; Ty_ty ty;};
 
-F_fragList SEM_transProg(A_exp exp);
+void SEM_transProg(A_exp root);
 
 #endif /* TIGER_SEMANT_H_ */

@@ -11,11 +11,8 @@ typedef char bool;
 #define FALSE 0
 
 void *checked_malloc(int);
-void *checked_realloc(void *, size_t);
 
 string String(char *);
-string String_format(const char *, ...);
-string String_from_int(int n);
 
 typedef struct U_boolList_ *U_boolList;
 struct U_boolList_ {bool head; U_boolList tail;};

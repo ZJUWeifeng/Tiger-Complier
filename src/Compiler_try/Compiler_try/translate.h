@@ -151,6 +151,5 @@ Tr_exp Tr_nilExp(void); /* provisional */
 Tr_exp Tr_noExp(void);
 
 void Tr_procEntryExit(Tr_level level, Tr_exp body, Tr_accessList formals);
-F_fragList Tr_getResult(void);
 
 #endif /* TIGER_TRANSLATE_H_ */

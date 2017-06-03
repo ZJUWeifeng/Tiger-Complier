@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IRtree</title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:600px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="echarts/echarts.js"></script>
+	<script src="js/json_frag.js"></script>
+    <script type="text/javascript">
+	
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'echarts'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/tree'
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+                
+				option = {
+					title : {
+						text: 'IR树展示',
+						textStyle: {
+							color: 'black',
+							fontSize: 30,
+							fontWeight:  'bolder'
+						}
+					},
+					tooltip : {
+						trigger: 'item',
+						formatter: "{b}: {c}"
+					},
+					toolbox: {
+						show : true,
+						feature : {
+							mark : {show: true},
+							dataView : {show: true, readOnly: false},
+							restore : {show: true},
+							saveAsImage : {show: true}
+						}
+					},
+					calculable : false,
+
+					series : [
+						{
+							name:'树图',
+							type:'tree',
+							orient: 'vertical',  // vertical horizontal
+							rootLocation: {x: 'center', y: 50}, // 根节点位置  {x: 'center',y: 10}
+							nodePadding: 25,
+							symbol: 'circle',
+							symbolSize: 55,
+							layerPadding: 50,
+                            hoverable: false,
+                            roam: true,
+							itemStyle: {
+								normal: {
+									color: '#1C86EE',
+									label: {
+										show: true,
+										position: 'inside',
+										textStyle: {
+											color: 'white',
+											fontSize: 15,
+											fontWeight:  'bolder'
+										}
+									},
+									lineStyle: {
+										color: '#191970',
+										width: 1.5,
+										type: 'solid' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
+									}
+								},
+								emphasis: {
+									label: {
+										show: true,
+										textStyle: {
+											color: 'white',
+											fontSize: 15,
+											fontWeight:  'bolder'
+										}
+									}
+								}
+							},
+							data: data,
+						}
+					]
+				};
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+    </script>
+</body>
+</yhtml>

@@ -9,57 +9,101 @@
 #include <stdarg.h>
 #include "util.h"
 #include "errormsg.h"
+#include "reserved.h"
 
-
-bool anyErrors= FALSE;
+bool fatalErrors = FALSE;
+bool parseErrors = FALSE;
 
 static string fileName = "";
 
-static int lineNum = 1;
+int lineNum = 1;
 
-int EM_tokPos=0;
+int EM_tokPos = 0;
+int EM_errorPos = 0;
 
 extern FILE *yyin;
+extern Nearest_List L_nearest;
+extern char replaceMsg[128];
 
-typedef struct intList {int i; struct intList *rest;} *IntList;
-
-static IntList intList(int i, IntList rest) 
-{IntList l= checked_malloc(sizeof *l);
- l->i=i; l->rest=rest;
- return l;
+static IntList intList(int i, IntList rest)
+{
+	IntList l = checked_malloc(sizeof *l);
+	l->i = i; l->rest = rest;
+	return l;
 }
 
-static IntList linePos=NULL;
+IntList linePos = NULL;
 
 void EM_newline(void)
-{lineNum++;
- linePos = intList(EM_tokPos, linePos);
+{
+	lineNum++;
+	linePos = intList(EM_tokPos, linePos);
 }
 
-void EM_error(int pos, char *message,...)
-{va_list ap;
- IntList lines = linePos; 
- int num=lineNum;
- 
+void EM_parse_error(int pos, char* message) {
+	static int error_count = 0;
+	static Nearest_List head = NULL;
+	static char* error;
+	int i = 0;
+	Nearest_List tempHead = NULL;
 
-  anyErrors=TRUE;
-  while (lines && lines->i >= pos) 
-       {lines=lines->rest; num--;}
+	parseErrors = TRUE;
+	//第一次进入函数，设置好链表头并定位到可能出现错误的id位置
+	if (error_count == 0) {
+		head = L_nearest;
+		while (head->tokpos > pos) {
+			head = head->next;
+		}
+		EM_errorPos = head->tokpos;
+	}
+	//不是第一次进入函数，应该顺着链表继续向前寻找可能出现错误的id位置
+	tempHead = head;
+	while (tempHead->next && i < error_count) {
+		tempHead = tempHead->next;
+		i++;
+		EM_errorPos = tempHead->tokpos;
+	}
+	error_count++;
+	//最早追溯到错误位置前的第3个id位置
+	if (!tempHead || error_count == 3) {
+		EM_error(pos, message);
+	}
+}
 
-  if (fileName) fprintf(stderr,"%s:",fileName);
-  if (lines) fprintf(stderr,"%d.%d: ", num, pos-lines->i);
-  va_start(ap,message);
-  vfprintf(stderr, message, ap);
-  va_end(ap);
-  fprintf(stderr,"\n");
+void EM_error(int pos, char *message, ...)
+{
+	va_list ap;
+	IntList lines = linePos;
+	int num = lineNum;
+
+
+	fatalErrors = TRUE;
+	while (lines && lines->i >= pos)
+	{
+		lines = lines->rest; num--;
+	}
+
+	if (fileName) fprintf(stderr, "%s:", fileName);
+	if (lines) fprintf(stderr, "%d.%d: ", num, pos - lines->i);
+	va_start(ap, message);
+	vfprintf(stderr, message, ap);
+	va_end(ap);
+	fprintf(stderr, "\n");
 
 }
 
 void EM_reset(string fname)
 {
- anyErrors=FALSE; fileName=fname; lineNum=1;
- linePos=intList(0,NULL);
- yyin = fopen(fname,"r");
- if (!yyin) {EM_error(0,"cannot open"); exit(1);}
+	fatalErrors = FALSE; fileName = fname; lineNum = 1;
+	EM_tokPos = 0;
+	charPos = 1;
+	L_nearest = NULL;
+	linePos = intList(0, NULL);
+	sprintf(replaceMsg, "");
+	FILE* fp = fopen(fname, "r");
+	if (!fp) {
+		EM_error(0, "can't open input file.\n");
+	}
+	yyrestart(fp);
 }
 

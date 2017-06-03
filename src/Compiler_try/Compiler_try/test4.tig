@@ -1,5 +1,5 @@
 /* define a recursive function */
-let
+les
 
 /* calculate n! */
 function nfactor(n: int): int =

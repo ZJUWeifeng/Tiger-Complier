@@ -1,72 +1,36 @@
-﻿生成启动时间为 2017/6/2 0:56:18。
-     1>项目“C:\Users\74559\Desktop\Compiler_try\Compiler_try\Compiler_try\Compiler_try.vcxproj”在节点 2 上(Rebuild 个目标)。
+﻿生成启动时间为 2017/6/4 1:54:32。
+     1>项目“C:\Users\74559\Desktop\大葱\Compiler_try\Compiler_try\Compiler_try\Compiler_try.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         E:\application\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D H5_BUILT_AS_DYNAMIC_LIB /D _SCL_SECURE_NO_WARNINGS /D NOMINMAX /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt absyn.c env.c errormsg.c lex.yy.c main.c mipsframe.c parse.c prabsyn.c printtree.c semant.c symbol.c table.c temp.c translate.c tree.c types.c util.c y.tab.c
-         y.tab.c
-         util.c
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\util.c(35): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: 参见“strcpy”的声明
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\util.c(74): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(255): note: 参见“strncat”的声明
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\util.c(75): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(346): note: 参见“strncpy”的声明
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\util.c(79): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(346): note: 参见“strncpy”的声明
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\util.c(85): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(255): note: 参见“strncat”的声明
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\util.c(86): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(346): note: 参见“strncpy”的声明
-         types.c
-         tree.c
+         E:\application\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D H5_BUILT_AS_DYNAMIC_LIB /D _SCL_SECURE_NO_WARNINGS /D NOMINMAX /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt errormsg.c semant.c translate.c
          translate.c
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\translate.c(565): warning C4028: 形参 3 与声明不同
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\translate.c(567): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\translate.c(527): warning C4028: 形参 3 与声明不同
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\translate.c(529): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
-         temp.c
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\temp.c(32): warning C4098: “TL_enter”:“void”函数返回值
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\temp.c(43): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\temp.c(60): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-         table.c
-         symbol.c
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\symbol.c(16): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(552): note: 参见“strdup”的声明
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\translate.c(530): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
          semant.c
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\semant.c(69): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(99): warning C4133: “函数”: 从“T_exp”到“T_stm”的类型不兼容
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(94): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\semant.c(534): warning C4047: “函数”:“Tr_accessList”与“int”的间接级别不同
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\semant.c(534): warning C4024: “Tr_procEntryExit”: 形参和实参 3 的类型不同
-         printtree.c
-         prabsyn.c
-         parse.c
-         mipsframe.c
-         main.c
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\main.c(39): warning C4013: “system”未定义；假设外部返回 int
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\main.c(25): warning C4101: “outfile”: 未引用的局部变量
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\main.c(23): warning C4101: “base_env”: 未引用的局部变量
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\main.c(23): warning C4101: “base_tenv”: 未引用的局部变量
-         lex.yy.c
-     1>src/tiger.lex(26): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: 参见“strcpy”的声明
-     1>src/tiger.lex(33): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(90): note: 参见“strcat”的声明
-     1>./src/lex.yy.c(1774): warning C4996: 'fileno': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _fileno. See online help for details.
-         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(2450): note: 参见“fileno”的声明
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(95): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(572): warning C4047: “函数”:“Tr_accessList”与“int”的间接级别不同
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(572): warning C4024: “Tr_procEntryExit”: 形参和实参 3 的类型不同
          errormsg.c
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\errormsg.c(62): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\errormsg.c(107): warning C4013: “yyrestart”未定义；假设外部返回 int
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\errormsg.c(102): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\errormsg.c(103): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(205): note: 参见“fopen”的声明
-         env.c
-         absyn.c
          正在生成代码...
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\semant.c(375): warning C4715: “transExp”: 不是所有的控件路径都返回值
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\semant.c(429): warning C4715: “transVar”: 不是所有的控件路径都返回值
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\semant.c(582): warning C4715: “transDec”: 不是所有的控件路径都返回值
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\semant.c(638): warning C4715: “transTy”: 不是所有的控件路径都返回值
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\translate.c(395): warning C4715: “Tr_breakExp”: 不是所有的控件路径都返回值
-     1>c:\users\74559\desktop\compiler_try\compiler_try\compiler_try\translate.c(197): warning C4715: “unCx”: 不是所有的控件路径都返回值
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(143): warning C4716: “transVar”: 必须返回一个值
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(133): warning C4716: “transExp”: 必须返回一个值
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(152): warning C4716: “transDec”: 必须返回一个值
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\semant.c(161): warning C4716: “transTy”: 必须返回一个值
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\translate.c(378): warning C4715: “Tr_breakExp”: 不是所有的控件路径都返回值
+     1>c:\users\74559\desktop\大葱\compiler_try\compiler_try\compiler_try\translate.c(188): warning C4715: “unCx”: 不是所有的控件路径都返回值
        Link:
-         E:\application\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\74559\Desktop\Compiler_try\Compiler_try\Debug\Compiler_try.exe" /INCREMENTAL /NOLOGO hdf5.lib GLAUX.LIB glew32.lib glew32s.lib GLU32.LIB glut32.lib OPENGL32.LIB opencv_calib3d2413d.lib opencv_contrib2413d.lib opencv_core2413d.lib opencv_features2d2413d.lib opencv_flann2413d.lib opencv_gpu2413d.lib opencv_highgui2413d.lib opencv_imgproc2413d.lib opencv_legacy2413d.lib opencv_ml2413d.lib opencv_nonfree2413d.lib opencv_objdetect2413d.lib opencv_photo2413d.lib opencv_stitching2413d.lib opencv_ts2413d.lib opencv_video2413d.lib opencv_videostab2413d.lib opencv_calib3d2413.lib opencv_contrib2413.lib opencv_core2413.lib opencv_features2d2413.lib opencv_flann2413.lib opencv_gpu2413.lib opencv_highgui2413.lib opencv_imgproc2413.lib opencv_legacy2413.lib opencv_ml2413.lib opencv_nonfree2413.lib opencv_objdetect2413.lib opencv_photo2413.lib opencv_stitching2413.lib opencv_ts2413.lib opencv_video2413.lib opencv_videostab2413.lib pthreadVC2.lib pthreadVCE2.lib pthreadVSE2.lib freenect.lib freenect_sync.lib pcl_common_debug.lib pcl_features_debug.lib pcl_filters_debug.lib pcl_io_debug.lib pcl_io_ply_debug.lib pcl_kdtree_debug.lib pcl_keypoints_debug.lib pcl_ml_debug.lib pcl_octree_debug.lib pcl_outofcore_debug.lib pcl_people_debug.lib pcl_recognition_debug.lib pcl_registration_debug.lib pcl_sample_consensus_debug.lib pcl_search_debug.lib pcl_segmentation_debug.lib pcl_stereo_debug.lib pcl_surface_debug.lib pcl_tracking_debug.lib pcl_visualization_debug.lib "vtkalglib-6.3.lib" "vtkChartsCore-6.3.lib" "vtkCommonColor-6.3.lib" "vtkCommonComputationalGeometry-6.3.lib" "vtkCommonCore-6.3.lib" "vtkCommonDataModel-6.3.lib" "vtkCommonExecutionModel-6.3.lib" "vtkCommonMath-6.3.lib" "vtkCommonMisc-6.3.lib" "vtkCommonSystem-6.3.lib" "vtkCommonTransforms-6.3.lib" "vtkDICOMParser-6.3.lib" "vtkDomainsChemistry-6.3.lib" "vtkexoIIc-6.3.lib" "vtkexpat-6.3.lib" "vtkFiltersAMR-6.3.lib" "vtkFiltersCore-6.3.lib" "vtkFiltersExtraction-6.3.lib" "vtkFiltersFlowPaths-6.3.lib" "vtkFiltersGeneral-6.3.lib" "vtkFiltersGeneric-6.3.lib" "vtkFiltersGeometry-6.3.lib" "vtkFiltersHybrid-6.3.lib" "vtkFiltersHyperTree-6.3.lib" "vtkFiltersImaging-6.3.lib" "vtkFiltersModeling-6.3.lib" "vtkFiltersParallel-6.3.lib" "vtkFiltersParallelImaging-6.3.lib" "vtkFiltersProgrammable-6.3.lib" "vtkFiltersSelection-6.3.lib" "vtkFiltersSMP-6.3.lib" "vtkFiltersSources-6.3.lib" "vtkFiltersStatistics-6.3.lib" "vtkFiltersTexture-6.3.lib" "vtkFiltersVerdict-6.3.lib" "vtkfreetype-6.3.lib" "vtkftgl-6.3.lib" "vtkGeovisCore-6.3.lib" "vtkgl2ps-6.3.lib" "vtkhdf5-6.3.lib" "vtkhdf5_hl-6.3.lib" "vtkImagingColor-6.3.lib" "vtkImagingCore-6.3.lib" "vtkImagingFourier-6.3.lib" "vtkImagingGeneral-6.3.lib" "vtkImagingHybrid-6.3.lib" "vtkImagingMath-6.3.lib" "vtkImagingMorphological-6.3.lib" "vtkImagingSources-6.3.lib" "vtkImagingStatistics-6.3.lib" "vtkImagingStencil-6.3.lib" "vtkInfovisCore-6.3.lib" "vtkInfovisLayout-6.3.lib" "vtkInteractionImage-6.3.lib" "vtkInteractionStyle-6.3.lib" "vtkInteractionWidgets-6.3.lib" "vtkIOAMR-6.3.lib" "vtkIOCore-6.3.lib" "vtkIOEnSight-6.3.lib" "vtkIOExodus-6.3.lib" "vtkIOExport-6.3.lib" "vtkIOGeometry-6.3.lib" "vtkIOImage-6.3.lib" "vtkIOImport-6.3.lib" "vtkIOInfovis-6.3.lib" "vtkIOLegacy-6.3.lib" "vtkIOLSDyna-6.3.lib" "vtkIOMINC-6.3.lib" "vtkIOMovie-6.3.lib" "vtkIONetCDF-6.3.lib" "vtkIOParallel-6.3.lib" "vtkIOParallelXML-6.3.lib" "vtkIOPLY-6.3.lib" "vtkIOSQL-6.3.lib" "vtkIOVideo-6.3.lib" "vtkIOXML-6.3.lib" "vtkIOXMLParser-6.3.lib" "vtkjpeg-6.3.lib" "vtkjsoncpp-6.3.lib" "vtklibxml2-6.3.lib" "vtkmetaio-6.3.lib" "vtkNetCDF-6.3.lib" "vtkNetCDF_cxx-6.3.lib" "vtkoggtheora-6.3.lib" "vtkParallelCore-6.3.lib" "vtkpng-6.3.lib" "vtkproj4-6.3.lib" "vtkRenderingAnnotation-6.3.lib" "vtkRenderingContext2D-6.3.lib" "vtkRenderingContextOpenGL-6.3.lib" "vtkRenderingCore-6.3.lib" "vtkRenderingFreeType-6.3.lib" "vtkRenderingGL2PS-6.3.lib" "vtkRenderingImage-6.3.lib" "vtkRenderingLabel-6.3.lib" "vtkRenderingLIC-6.3.lib" "vtkRenderingLOD-6.3.lib" "vtkRenderingOpenGL-6.3.lib" "vtkRenderingVolume-6.3.lib" "vtkRenderingVolumeOpenGL-6.3.lib" "vtksqlite-6.3.lib" "vtksys-6.3.lib" "vtktiff-6.3.lib" "vtkverdict-6.3.lib" "vtkViewsContext2D-6.3.lib" "vtkViewsCore-6.3.lib" "vtkViewsInfovis-6.3.lib" "vtkzlib-6.3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\74559\Desktop\Compiler_try\Compiler_try\Debug\Compiler_try.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\74559\Desktop\Compiler_try\Compiler_try\Debug\Compiler_try.lib" /MACHINE:X86 /SAFESEH:NO Debug\absyn.obj
+         E:\application\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\74559\Desktop\大葱\Compiler_try\Compiler_try\Debug\Compiler_try.exe" /INCREMENTAL /NOLOGO hdf5.lib GLAUX.LIB glew32.lib glew32s.lib GLU32.LIB glut32.lib OPENGL32.LIB opencv_calib3d2413d.lib opencv_contrib2413d.lib opencv_core2413d.lib opencv_features2d2413d.lib opencv_flann2413d.lib opencv_gpu2413d.lib opencv_highgui2413d.lib opencv_imgproc2413d.lib opencv_legacy2413d.lib opencv_ml2413d.lib opencv_nonfree2413d.lib opencv_objdetect2413d.lib opencv_photo2413d.lib opencv_stitching2413d.lib opencv_ts2413d.lib opencv_video2413d.lib opencv_videostab2413d.lib opencv_calib3d2413.lib opencv_contrib2413.lib opencv_core2413.lib opencv_features2d2413.lib opencv_flann2413.lib opencv_gpu2413.lib opencv_highgui2413.lib opencv_imgproc2413.lib opencv_legacy2413.lib opencv_ml2413.lib opencv_nonfree2413.lib opencv_objdetect2413.lib opencv_photo2413.lib opencv_stitching2413.lib opencv_ts2413.lib opencv_video2413.lib opencv_videostab2413.lib pthreadVC2.lib pthreadVCE2.lib pthreadVSE2.lib freenect.lib freenect_sync.lib pcl_common_debug.lib pcl_features_debug.lib pcl_filters_debug.lib pcl_io_debug.lib pcl_io_ply_debug.lib pcl_kdtree_debug.lib pcl_keypoints_debug.lib pcl_ml_debug.lib pcl_octree_debug.lib pcl_outofcore_debug.lib pcl_people_debug.lib pcl_recognition_debug.lib pcl_registration_debug.lib pcl_sample_consensus_debug.lib pcl_search_debug.lib pcl_segmentation_debug.lib pcl_stereo_debug.lib pcl_surface_debug.lib pcl_tracking_debug.lib pcl_visualization_debug.lib "vtkalglib-6.3.lib" "vtkChartsCore-6.3.lib" "vtkCommonColor-6.3.lib" "vtkCommonComputationalGeometry-6.3.lib" "vtkCommonCore-6.3.lib" "vtkCommonDataModel-6.3.lib" "vtkCommonExecutionModel-6.3.lib" "vtkCommonMath-6.3.lib" "vtkCommonMisc-6.3.lib" "vtkCommonSystem-6.3.lib" "vtkCommonTransforms-6.3.lib" "vtkDICOMParser-6.3.lib" "vtkDomainsChemistry-6.3.lib" "vtkexoIIc-6.3.lib" "vtkexpat-6.3.lib" "vtkFiltersAMR-6.3.lib" "vtkFiltersCore-6.3.lib" "vtkFiltersExtraction-6.3.lib" "vtkFiltersFlowPaths-6.3.lib" "vtkFiltersGeneral-6.3.lib" "vtkFiltersGeneric-6.3.lib" "vtkFiltersGeometry-6.3.lib" "vtkFiltersHybrid-6.3.lib" "vtkFiltersHyperTree-6.3.lib" "vtkFiltersImaging-6.3.lib" "vtkFiltersModeling-6.3.lib" "vtkFiltersParallel-6.3.lib" "vtkFiltersParallelImaging-6.3.lib" "vtkFiltersProgrammable-6.3.lib" "vtkFiltersSelection-6.3.lib" "vtkFiltersSMP-6.3.lib" "vtkFiltersSources-6.3.lib" "vtkFiltersStatistics-6.3.lib" "vtkFiltersTexture-6.3.lib" "vtkFiltersVerdict-6.3.lib" "vtkfreetype-6.3.lib" "vtkftgl-6.3.lib" "vtkGeovisCore-6.3.lib" "vtkgl2ps-6.3.lib" "vtkhdf5-6.3.lib" "vtkhdf5_hl-6.3.lib" "vtkImagingColor-6.3.lib" "vtkImagingCore-6.3.lib" "vtkImagingFourier-6.3.lib" "vtkImagingGeneral-6.3.lib" "vtkImagingHybrid-6.3.lib" "vtkImagingMath-6.3.lib" "vtkImagingMorphological-6.3.lib" "vtkImagingSources-6.3.lib" "vtkImagingStatistics-6.3.lib" "vtkImagingStencil-6.3.lib" "vtkInfovisCore-6.3.lib" "vtkInfovisLayout-6.3.lib" "vtkInteractionImage-6.3.lib" "vtkInteractionStyle-6.3.lib" "vtkInteractionWidgets-6.3.lib" "vtkIOAMR-6.3.lib" "vtkIOCore-6.3.lib" "vtkIOEnSight-6.3.lib" "vtkIOExodus-6.3.lib" "vtkIOExport-6.3.lib" "vtkIOGeometry-6.3.lib" "vtkIOImage-6.3.lib" "vtkIOImport-6.3.lib" "vtkIOInfovis-6.3.lib" "vtkIOLegacy-6.3.lib" "vtkIOLSDyna-6.3.lib" "vtkIOMINC-6.3.lib" "vtkIOMovie-6.3.lib" "vtkIONetCDF-6.3.lib" "vtkIOParallel-6.3.lib" "vtkIOParallelXML-6.3.lib" "vtkIOPLY-6.3.lib" "vtkIOSQL-6.3.lib" "vtkIOVideo-6.3.lib" "vtkIOXML-6.3.lib" "vtkIOXMLParser-6.3.lib" "vtkjpeg-6.3.lib" "vtkjsoncpp-6.3.lib" "vtklibxml2-6.3.lib" "vtkmetaio-6.3.lib" "vtkNetCDF-6.3.lib" "vtkNetCDF_cxx-6.3.lib" "vtkoggtheora-6.3.lib" "vtkParallelCore-6.3.lib" "vtkpng-6.3.lib" "vtkproj4-6.3.lib" "vtkRenderingAnnotation-6.3.lib" "vtkRenderingContext2D-6.3.lib" "vtkRenderingContextOpenGL-6.3.lib" "vtkRenderingCore-6.3.lib" "vtkRenderingFreeType-6.3.lib" "vtkRenderingGL2PS-6.3.lib" "vtkRenderingImage-6.3.lib" "vtkRenderingLabel-6.3.lib" "vtkRenderingLIC-6.3.lib" "vtkRenderingLOD-6.3.lib" "vtkRenderingOpenGL-6.3.lib" "vtkRenderingVolume-6.3.lib" "vtkRenderingVolumeOpenGL-6.3.lib" "vtksqlite-6.3.lib" "vtksys-6.3.lib" "vtktiff-6.3.lib" "vtkverdict-6.3.lib" "vtkViewsContext2D-6.3.lib" "vtkViewsCore-6.3.lib" "vtkViewsInfovis-6.3.lib" "vtkzlib-6.3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\74559\Desktop\大葱\Compiler_try\Compiler_try\Debug\Compiler_try.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\74559\Desktop\大葱\Compiler_try\Compiler_try\Debug\Compiler_try.lib" /MACHINE:X86 /SAFESEH:NO Debug\absyn.obj
          Debug\env.obj
          Debug\errormsg.obj
          Debug\lex.yy.obj
@@ -75,18 +39,19 @@
          Debug\parse.obj
          Debug\prabsyn.obj
          Debug\printtree.obj
+         Debug\reserved.obj
          Debug\semant.obj
          Debug\symbol.obj
          Debug\table.obj
          Debug\temp.obj
+         Debug\tiger.tab.obj
          Debug\translate.obj
          Debug\tree.obj
          Debug\types.obj
          Debug\util.obj
-         Debug\y.tab.obj
-         Compiler_try.vcxproj -> C:\Users\74559\Desktop\Compiler_try\Compiler_try\Debug\Compiler_try.exe
-     1>已完成生成项目“C:\Users\74559\Desktop\Compiler_try\Compiler_try\Compiler_try\Compiler_try.vcxproj”(Rebuild 个目标)的操作。
+         Compiler_try.vcxproj -> C:\Users\74559\Desktop\大葱\Compiler_try\Compiler_try\Debug\Compiler_try.exe
+     1>已完成生成项目“C:\Users\74559\Desktop\大葱\Compiler_try\Compiler_try\Compiler_try\Compiler_try.vcxproj”(Build 个目标)的操作。
 
 已成功生成。
 
-已用时间 00:00:06.73
+已用时间 00:00:02.71

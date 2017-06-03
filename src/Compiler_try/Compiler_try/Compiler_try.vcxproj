@@ -149,16 +149,17 @@
     <ClInclude Include="parse.h" />
     <ClInclude Include="prabsyn.h" />
     <ClInclude Include="printtree.h" />
+    <ClInclude Include="reserved.h" />
     <ClInclude Include="semant.h" />
     <ClInclude Include="symbol.h" />
     <ClInclude Include="table.h" />
     <ClInclude Include="temp.h" />
+    <ClInclude Include="tiger.tab.h" />
     <ClInclude Include="tokens.h" />
     <ClInclude Include="translate.h" />
     <ClInclude Include="tree.h" />
     <ClInclude Include="types.h" />
     <ClInclude Include="util.h" />
-    <ClInclude Include="y.tab.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="absyn.c" />
@@ -170,15 +171,20 @@
     <ClCompile Include="parse.c" />
     <ClCompile Include="prabsyn.c" />
     <ClCompile Include="printtree.c" />
+    <ClCompile Include="reserved.c" />
     <ClCompile Include="semant.c" />
     <ClCompile Include="symbol.c" />
     <ClCompile Include="table.c" />
     <ClCompile Include="temp.c" />
+    <ClCompile Include="tiger.tab.c" />
     <ClCompile Include="translate.c" />
     <ClCompile Include="tree.c" />
     <ClCompile Include="types.c" />
     <ClCompile Include="util.c" />
-    <ClCompile Include="y.tab.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tiger.lex" />
+    <None Include="tiger.y" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -63,7 +63,10 @@
     <ClInclude Include="util.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="y.tab.h">
+    <ClInclude Include="tiger.tab.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="reserved.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -113,14 +116,25 @@
     <ClCompile Include="util.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="y.tab.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="mipsframe.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="tiger.tab.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="reserved.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tiger.lex">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="tiger.y">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

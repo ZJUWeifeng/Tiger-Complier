@@ -1,0 +1,7 @@
+/*ÄÚÖÃÀàĞÍarray*/
+let 
+   type intArray = array of int
+    var a := intArray [10] of 13
+in 
+   a
+end

@@ -1,0 +1,9 @@
+/*域相同但类型不同的两个record的赋值 */
+let
+	type mytype1 = {name:string , id:int}
+	type mytype2 = {name:string , id:int}
+
+	var rec: mytype1 := mytype2 {name="Name", id=0}
+in
+	rec
+end

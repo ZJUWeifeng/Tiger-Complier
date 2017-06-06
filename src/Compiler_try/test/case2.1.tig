@@ -1,0 +1,6 @@
+/*有返回值的函数*/
+let
+	function g(a:int):int = a
+in 
+	g(2)
+end

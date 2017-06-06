@@ -1,0 +1,7 @@
+/* record类型与nil比较*/
+let 
+	type rectype = {name:string, id:int}
+	var b:rectype := nil
+in
+	b <> nil
+end

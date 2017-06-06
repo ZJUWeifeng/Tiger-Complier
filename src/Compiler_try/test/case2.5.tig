@@ -1,0 +1,6 @@
+/*参数类型与参数列表不符*/
+let
+	function g (a:int , b:string):int = a
+in
+	g("one", "two")
+end

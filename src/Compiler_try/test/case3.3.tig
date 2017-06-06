@@ -1,0 +1,6 @@
+/*不存在的类型 */
+let
+	var a:= mytype {}
+in
+	0
+end

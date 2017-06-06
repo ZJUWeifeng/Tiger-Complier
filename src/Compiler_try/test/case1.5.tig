@@ -1,0 +1,7 @@
+/*类型递归定义*/
+let
+    type intlist = {hd: int, tl: intlist} 
+    var list:intlist := intlist { hd=5, tl= nil } 
+in
+	list
+end

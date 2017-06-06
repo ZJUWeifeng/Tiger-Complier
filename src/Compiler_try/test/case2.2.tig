@@ -1,0 +1,6 @@
+/*Œﬁ∑µªÿ÷µ*/
+let
+	function g(a:int) = a:=5
+in 
+	g(2)
+end

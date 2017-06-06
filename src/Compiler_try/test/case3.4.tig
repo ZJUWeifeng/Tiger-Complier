@@ -1,0 +1,7 @@
+/*给不在record域内的变量赋值 */
+let 
+	type mytype = {name:string , id:int}
+	var rec := mytype {name="Name", id=0}
+in
+	rec.nam := "asd"
+end

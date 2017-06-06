@@ -1,0 +1,6 @@
+/*ÄÚÖÃÀàĞÍ*/
+let 
+   var b:string := "hello world"
+in 
+   b
+end

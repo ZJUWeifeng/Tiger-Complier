@@ -1,0 +1,7 @@
+/*ÄÚÖÃÀàĞÍrecord*/
+let
+   type myrecord = {value: int, name: string } 
+   var rec:myrecord := myrecord { value = 5, name = "five" } 
+in
+   rec
+end
